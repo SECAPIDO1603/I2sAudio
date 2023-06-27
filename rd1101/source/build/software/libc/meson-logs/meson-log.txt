@@ -1,0 +1,1164 @@
+Build started at 2023-05-26T10:34:30.040738
+Main binary: /home/johan/miniconda3/envs/fpga/bin/python
+Build Options: -Dmultilib=false -Dpicocrt=false -Datomic-ungetc=false -Dthread-local-storage=false -Dio-long-long=true -Dformat-default=integer -Dincludedir=picolibc/lm32-elf/include -Dlibdir=picolibc/lm32-elf/lib --cross-file=/home/johan/Descargas/I2S/rd1101/source/build/software/libc/cross.txt
+Python system: Linux
+The Meson build system
+Version: 1.1.0
+Source dir: /home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data
+Build dir: /home/johan/Descargas/I2S/rd1101/source/build/software/libc
+Build type: cross build
+Project name: picolibc
+Project version: 1.7.9
+C compiler for the host machine: lm32-elf-gcc (gcc 9.2.0 "lm32-elf-gcc (9.2.0) 9.2.0")
+C linker for the host machine: lm32-elf-gcc ld.bfd 2.34
+C compiler for the build machine: cc (gcc 11.3.0 "cc (Ubuntu 11.3.0-1ubuntu1~22.04.1) 11.3.0")
+C linker for the build machine: cc ld.bfd 2.38
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: lm32
+Host machine cpu: lm32
+Target machine cpu family: lm32
+Target machine cpu: lm32
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpy_85o_px/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpy_85o_px/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -nostdlib 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -nostdlib: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpwv4w5wd2/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpwv4w5wd2/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib 
+
+Code:
+ 
+#include <float.h>
+#ifndef __LDBL_MANT_DIG__
+#error No long double support in float.h
+#endif
+long double test()
+{
+	long double ld = 0.0L;
+	 return ld;
+}
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Checking if "long double check" compiles: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpd_9wshfo/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpd_9wshfo/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib 
+
+Code:
+ 
+#include <float.h>
+char size_test[sizeof(double) == sizeof(long double) ? 1 : -1];
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Checking if "long double same as double" compiles: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpbkvwc_vs/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpbkvwc_vs/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib 
+
+Code:
+ 
+char size_test[sizeof(float) == sizeof(double) ? 1 : -1];
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpbkvwc_vs/testfile.c:2:6: error: size of array 'size_test' is negative
+    2 | char size_test[sizeof(float) == sizeof(double) ? 1 : -1];
+      |      ^~~~~~~~~
+
+Checking if "double same as float" compiles: NO (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpscsqhaw2/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpscsqhaw2/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -fno-common 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -fno-common: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpsewumm7a/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpsewumm7a/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -frounding-math 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -frounding-math: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpi587jx02/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpi587jx02/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -fsignaling-nans 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -fsignaling-nans: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmppn6qy_cv/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmppn6qy_cv/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Wunsupported-floating-point-opt -Wno-unsupported-floating-point-opt 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ lm32-elf-gcc: error: unrecognized command line option '-Wunsupported-floating-point-opt'
+
+Compiler for C supports arguments -Wno-unsupported-floating-point-opt: NO (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpo450r57y/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpo450r57y/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -fno-stack-protector 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -fno-stack-protector: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpayjkmmue/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpayjkmmue/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -fno-builtin-copysignl 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -fno-builtin-copysignl: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpz8rk_uex/testfile.c -E -P -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifndef __USER_LABEL_PREFIX__
+        #define MESON_UNDERSCORE_PREFIX unsupported
+        #else
+        #define MESON_UNDERSCORE_PREFIX __USER_LABEL_PREFIX__
+        #endif
+        "MESON_HAVE_UNDERSCORE_DELIMITER" MESON_UNDERSCORE_PREFIX
+        
+Cached compiler stdout:
+ #define __STDC__ 1
+#define __STDC_VERSION__ 201710L
+#define __STDC_UTF_16__ 1
+#define __STDC_UTF_32__ 1
+#define __STDC_HOSTED__ 1
+#define __GNUC__ 9
+#define __GNUC_MINOR__ 2
+#define __GNUC_PATCHLEVEL__ 0
+#define __VERSION__ "9.2.0"
+#define __ATOMIC_RELAXED 0
+#define __ATOMIC_SEQ_CST 5
+#define __ATOMIC_ACQUIRE 2
+#define __ATOMIC_RELEASE 3
+#define __ATOMIC_ACQ_REL 4
+#define __ATOMIC_CONSUME 1
+#define __FINITE_MATH_ONLY__ 0
+#define __SIZEOF_INT__ 4
+#define __SIZEOF_LONG__ 4
+#define __SIZEOF_LONG_LONG__ 8
+#define __SIZEOF_SHORT__ 2
+#define __SIZEOF_FLOAT__ 4
+#define __SIZEOF_DOUBLE__ 8
+#define __SIZEOF_LONG_DOUBLE__ 8
+#define __SIZEOF_SIZE_T__ 4
+#define __CHAR_BIT__ 8
+#define __BIGGEST_ALIGNMENT__ 8
+#define __ORDER_LITTLE_ENDIAN__ 1234
+#define __ORDER_BIG_ENDIAN__ 4321
+#define __ORDER_PDP_ENDIAN__ 3412
+#define __BYTE_ORDER__ __ORDER_BIG_ENDIAN__
+#define __FLOAT_WORD_ORDER__ __ORDER_BIG_ENDIAN__
+#define __SIZEOF_POINTER__ 4
+#define __SIZE_TYPE__ unsigned int
+#define __PTRDIFF_TYPE__ int
+#define __WCHAR_TYPE__ int
+#define __WINT_TYPE__ unsigned int
+#define __INTMAX_TYPE__ long long int
+#define __UINTMAX_TYPE__ long long unsigned int
+#define __CHAR16_TYPE__ short unsigned int
+#define __CHAR32_TYPE__ long unsigned int
+#define __SIG_ATOMIC_TYPE__ int
+#define __INT8_TYPE__ signed char
+#define __INT16_TYPE__ short int
+#define __INT32_TYPE__ long int
+#define __INT64_TYPE__ long long int
+#define __UINT8_TYPE__ unsigned char
+#define __UINT16_TYPE__ short unsigned int
+#define __UINT32_TYPE__ long unsigned int
+#define __UINT64_TYPE__ long long unsigned int
+#define __INT_LEAST8_TYPE__ signed char
+#define __INT_LEAST16_TYPE__ short int
+#define __INT_LEAST32_TYPE__ long int
+#define __INT_LEAST64_TYPE__ long long int
+#define __UINT_LEAST8_TYPE__ unsigned char
+#define __UINT_LEAST16_TYPE__ short unsigned int
+#define __UINT_LEAST32_TYPE__ long unsigned int
+#define __UINT_LEAST64_TYPE__ long long unsigned int
+#define __INT_FAST8_TYPE__ int
+#define __INT_FAST16_TYPE__ int
+#define __INT_FAST32_TYPE__ int
+#define __INT_FAST64_TYPE__ long long int
+#define __UINT_FAST8_TYPE__ unsigned int
+#define __UINT_FAST16_TYPE__ unsigned int
+#define __UINT_FAST32_TYPE__ unsigned int
+#define __UINT_FAST64_TYPE__ long long unsigned int
+#define __INTPTR_TYPE__ int
+#define __UINTPTR_TYPE__ unsigned int
+#define __has_include(STR) __has_include__(STR)
+#define __has_include_next(STR) __has_include_next__(STR)
+#define __EXCEPTIONS 1
+#define __GXX_ABI_VERSION 1013
+#define __USING_SJLJ_EXCEPTIONS__ 1
+#define __SCHAR_MAX__ 0x7f
+#define __SHRT_MAX__ 0x7fff
+#define __INT_MAX__ 0x7fffffff
+#define __LONG_MAX__ 0x7fffffffL
+#define __LONG_LONG_MAX__ 0x7fffffffffffffffLL
+#define __WCHAR_MAX__ 0x7fffffff
+#define __WCHAR_MIN__ (-__WCHAR_MAX__ - 1)
+#define __WINT_MAX__ 0xffffffffU
+#define __WINT_MIN__ 0U
+#define __PTRDIFF_MAX__ 0x7fffffff
+#define __SIZE_MAX__ 0xffffffffU
+#define __SCHAR_WIDTH__ 8
+#define __SHRT_WIDTH__ 16
+#define __INT_WIDTH__ 32
+#define __LONG_WIDTH__ 32
+#define __LONG_LONG_WIDTH__ 64
+#define __WCHAR_WIDTH__ 32
+#define __WINT_WIDTH__ 32
+#define __PTRDIFF_WIDTH__ 32
+#define __SIZE_WIDTH__ 32
+#define __INTMAX_MAX__ 0x7fffffffffffffffLL
+#define __INTMAX_C(c) c ## LL
+#define __UINTMAX_MAX__ 0xffffffffffffffffULL
+#define __UINTMAX_C(c) c ## ULL
+#define __INTMAX_WIDTH__ 64
+#define __SIG_ATOMIC_MAX__ 0x7fffffff
+#define __SIG_ATOMIC_MIN__ (-__SIG_ATOMIC_MAX__ - 1)
+#define __SIG_ATOMIC_WIDTH__ 32
+#define __INT8_MAX__ 0x7f
+#define __INT16_MAX__ 0x7fff
+#define __INT32_MAX__ 0x7fffffffL
+#define __INT64_MAX__ 0x7fffffffffffffffLL
+#define __UINT8_MAX__ 0xff
+#define __UINT16_MAX__ 0xffff
+#define __UINT32_MAX__ 0xffffffffUL
+#define __UINT64_MAX__ 0xffffffffffffffffULL
+#define __INT_LEAST8_MAX__ 0x7f
+#define __INT8_C(c) c
+#define __INT_LEAST8_WIDTH__ 8
+#define __INT_LEAST16_MAX__ 0x7fff
+#define __INT16_C(c) c
+#define __INT_LEAST16_WIDTH__ 16
+#define __INT_LEAST32_MAX__ 0x7fffffffL
+#define __INT32_C(c) c ## L
+#define __INT_LEAST32_WIDTH__ 32
+#define __INT_LEAST64_MAX__ 0x7fffffffffffffffLL
+#define __INT64_C(c) c ## LL
+#define __INT_LEAST64_WIDTH__ 64
+#define __UINT_LEAST8_MAX__ 0xff
+#define __UINT8_C(c) c
+#define __UINT_LEAST16_MAX__ 0xffff
+#define __UINT16_C(c) c
+#define __UINT_LEAST32_MAX__ 0xffffffffUL
+#define __UINT32_C(c) c ## UL
+#define __UINT_LEAST64_MAX__ 0xffffffffffffffffULL
+#define __UINT64_C(c) c ## ULL
+#define __INT_FAST8_MAX__ 0x7fffffff
+#define __INT_FAST8_WIDTH__ 32
+#define __INT_FAST16_MAX__ 0x7fffffff
+#define __INT_FAST16_WIDTH__ 32
+#define __INT_FAST32_MAX__ 0x7fffffff
+#define __INT_FAST32_WIDTH__ 32
+#define __INT_FAST64_MAX__ 0x7fffffffffffffffLL
+#define __INT_FAST64_WIDTH__ 64
+#define __UINT_FAST8_MAX__ 0xffffffffU
+#define __UINT_FAST16_MAX__ 0xffffffffU
+#define __UINT_FAST32_MAX__ 0xffffffffU
+#define __UINT_FAST64_MAX__ 0xffffffffffffffffULL
+#define __INTPTR_MAX__ 0x7fffffff
+#define __INTPTR_WIDTH__ 32
+#define __UINTPTR_MAX__ 0xffffffffU
+#define __GCC_IEC_559 0
+#define __GCC_IEC_559_COMPLEX 0
+#define __FLT_EVAL_METHOD__ 0
+#define __FLT_EVAL_METHOD_TS_18661_3__ 0
+#define __DEC_EVAL_METHOD__ 2
+#define __FLT_RADIX__ 2
+#define __FLT_MANT_DIG__ 24
+#define __FLT_DIG__ 6
+#define __FLT_MIN_EXP__ (-125)
+#define __FLT_MIN_10_EXP__ (-37)
+#define __FLT_MAX_EXP__ 128
+#define __FLT_MAX_10_EXP__ 38
+#define __FLT_DECIMAL_DIG__ 9
+#define __FLT_MAX__ 3.4028234663852886e+38F
+#define __FLT_MIN__ 1.1754943508222875e-38F
+#define __FLT_EPSILON__ 1.1920928955078125e-7F
+#define __FLT_DENORM_MIN__ 1.4012984643248171e-45F
+#define __FLT_HAS_DENORM__ 1
+#define __FLT_HAS_INFINITY__ 1
+#define __FLT_HAS_QUIET_NAN__ 1
+#define __DBL_MANT_DIG__ 53
+#define __DBL_DIG__ 15
+#define __DBL_MIN_EXP__ (-1021)
+#define __DBL_MIN_10_EXP__ (-307)
+#define __DBL_MAX_EXP__ 1024
+#define __DBL_MAX_10_EXP__ 308
+#define __DBL_DECIMAL_DIG__ 17
+#define __DBL_MAX__ ((double)1.7976931348623157e+308L)
+#define __DBL_MIN__ ((double)2.2250738585072014e-308L)
+#define __DBL_EPSILON__ ((double)2.2204460492503131e-16L)
+#define __DBL_DENORM_MIN__ ((double)4.9406564584124654e-324L)
+#define __DBL_HAS_DENORM__ 1
+#define __DBL_HAS_INFINITY__ 1
+#define __DBL_HAS_QUIET_NAN__ 1
+#define __LDBL_MANT_DIG__ 53
+#define __LDBL_DIG__ 15
+#define __LDBL_MIN_EXP__ (-1021)
+#define __LDBL_MIN_10_EXP__ (-307)
+#define __LDBL_MAX_EXP__ 1024
+#define __LDBL_MAX_10_EXP__ 308
+#define __DECIMAL_DIG__ 17
+#define __LDBL_DECIMAL_DIG__ 17
+#define __LDBL_MAX__ 1.7976931348623157e+308L
+#define __LDBL_MIN__ 2.2250738585072014e-308L
+#define __LDBL_EPSILON__ 2.2204460492503131e-16L
+#define __LDBL_DENORM_MIN__ 4.9406564584124654e-324L
+#define __LDBL_HAS_DENORM__ 1
+#define __LDBL_HAS_INFINITY__ 1
+#define __LDBL_HAS_QUIET_NAN__ 1
+#define __FLT32_MANT_DIG__ 24
+#define __FLT32_DIG__ 6
+#define __FLT32_MIN_EXP__ (-125)
+#define __FLT32_MIN_10_EXP__ (-37)
+#define __FLT32_MAX_EXP__ 128
+#define __FLT32_MAX_10_EXP__ 38
+#define __FLT32_DECIMAL_DIG__ 9
+#define __FLT32_MAX__ 3.4028234663852886e+38F32
+#define __FLT32_MIN__ 1.1754943508222875e-38F32
+#define __FLT32_EPSILON__ 1.1920928955078125e-7F32
+#define __FLT32_DENORM_MIN__ 1.4012984643248171e-45F32
+#define __FLT32_HAS_DENORM__ 1
+#define __FLT32_HAS_INFINITY__ 1
+#define __FLT32_HAS_QUIET_NAN__ 1
+#define __FLT64_MANT_DIG__ 53
+#define __FLT64_DIG__ 15
+#define __FLT64_MIN_EXP__ (-1021)
+#define __FLT64_MIN_10_EXP__ (-307)
+#define __FLT64_MAX_EXP__ 1024
+#define __FLT64_MAX_10_EXP__ 308
+#define __FLT64_DECIMAL_DIG__ 17
+#define __FLT64_MAX__ 1.7976931348623157e+308F64
+#define __FLT64_MIN__ 2.2250738585072014e-308F64
+#define __FLT64_EPSILON__ 2.2204460492503131e-16F64
+#define __FLT64_DENORM_MIN__ 4.9406564584124654e-324F64
+#define __FLT64_HAS_DENORM__ 1
+#define __FLT64_HAS_INFINITY__ 1
+#define __FLT64_HAS_QUIET_NAN__ 1
+#define __FLT32X_MANT_DIG__ 53
+#define __FLT32X_DIG__ 15
+#define __FLT32X_MIN_EXP__ (-1021)
+#define __FLT32X_MIN_10_EXP__ (-307)
+#define __FLT32X_MAX_EXP__ 1024
+#define __FLT32X_MAX_10_EXP__ 308
+#define __FLT32X_DECIMAL_DIG__ 17
+#define __FLT32X_MAX__ 1.7976931348623157e+308F32x
+#define __FLT32X_MIN__ 2.2250738585072014e-308F32x
+#define __FLT32X_EPSILON__ 2.2204460492503131e-16F32x
+#define __FLT32X_DENORM_MIN__ 4.9406564584124654e-324F32x
+#define __FLT32X_HAS_DENORM__ 1
+#define __FLT32X_HAS_INFINITY__ 1
+#define __FLT32X_HAS_QUIET_NAN__ 1
+#define __DEC32_MANT_DIG__ 7
+#define __DEC32_MIN_EXP__ (-94)
+#define __DEC32_MAX_EXP__ 97
+#define __DEC32_MIN__ 1E-95DF
+#define __DEC32_MAX__ 9.999999E96DF
+#define __DEC32_EPSILON__ 1E-6DF
+#define __DEC32_SUBNORMAL_MIN__ 0.000001E-95DF
+#define __DEC64_MANT_DIG__ 16
+#define __DEC64_MIN_EXP__ (-382)
+#define __DEC64_MAX_EXP__ 385
+#define __DEC64_MIN__ 1E-383DD
+#define __DEC64_MAX__ 9.999999999999999E384DD
+#define __DEC64_EPSILON__ 1E-15DD
+#define __DEC64_SUBNORMAL_MIN__ 0.000000000000001E-383DD
+#define __DEC128_MANT_DIG__ 34
+#define __DEC128_MIN_EXP__ (-6142)
+#define __DEC128_MAX_EXP__ 6145
+#define __DEC128_MIN__ 1E-6143DL
+#define __DEC128_MAX__ 9.999999999999999999999999999999999E6144DL
+#define __DEC128_EPSILON__ 1E-33DL
+#define __DEC128_SUBNORMAL_MIN__ 0.000000000000000000000000000000001E-6143DL
+#define __REGISTER_PREFIX__ 
+#define __USER_LABEL_PREFIX__ 
+#define __GNUC_STDC_INLINE__ 1
+#define __NO_INLINE__ 1
+#define __CHAR_UNSIGNED__ 1
+#define __GCC_ATOMIC_BOOL_LOCK_FREE 1
+#define __GCC_ATOMIC_CHAR_LOCK_FREE 1
+#define __GCC_ATOMIC_CHAR16_T_LOCK_FREE 1
+#define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 1
+#define __GCC_ATOMIC_WCHAR_T_LOCK_FREE 1
+#define __GCC_ATOMIC_SHORT_LOCK_FREE 1
+#define __GCC_ATOMIC_INT_LOCK_FREE 1
+#define __GCC_ATOMIC_LONG_LOCK_FREE 1
+#define __GCC_ATOMIC_LLONG_LOCK_FREE 1
+#define __GCC_ATOMIC_TEST_AND_SET_TRUEVAL 1
+#define __GCC_ATOMIC_POINTER_LOCK_FREE 1
+#define __PRAGMA_REDEFINE_EXTNAME 1
+#define __SIZEOF_WCHAR_T__ 4
+#define __SIZEOF_WINT_T__ 4
+#define __SIZEOF_PTRDIFF_T__ 4
+#define __lm32__ 1
+#define __multiply_enabled__ 1
+#define __divide_enabled__ 1
+#define __barrel_shift_enabled__ 1
+#define __sign_extend_enabled__ 1
+#define __ELF__ 1
+#define __lm32__ 1
+#define _FILE_OFFSET_BITS 64
+#define MESON_UNDERSCORE_PREFIX __USER_LABEL_PREFIX__
+        "MESON_HAVE_UNDERSCORE_DELIMITER"
+
+Cached compiler stderr:
+ 
+Queried compiler for function prefix: __USER_LABEL_PREFIX__ is ""
+Program lm32-elf-gcc-nm found: YES
+Program scripts/duplicate-names found: YES (/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/scripts/duplicate-names)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp799sg8fm/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp799sg8fm/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Wl,--fatal-warnings -Wl,--defsym=_start=0 -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ int main(void) { return 0; }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports link arguments -Wl,--defsym=_start=0: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpzsbbmsse/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpzsbbmsse/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Wl,--fatal-warnings -Wl,-alias,main,testalias -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ int main(void) { return 0; }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: unrecognized -a option `lias'
+collect2: error: ld returned 1 exit status
+
+Compiler for C supports link arguments -Wl,-alias,main,testalias: NO (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpgax2rc9n/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpgax2rc9n/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Werror=attributes 
+
+Code:
+ 
+        int foo(void) { return 0; }
+        int bar(void) __attribute__((alias("foo")));
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports function attribute alias: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpgu3lsiia/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpgu3lsiia/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Werror=attributes 
+
+Code:
+ int foo(const char * p, ...) __attribute__((format(printf, 1, 2)));
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports function attribute format: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpiaov6ts5/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpiaov6ts5/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Werror=attributes 
+
+Code:
+ int foo(void) __attribute__((weak));
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports function attribute weak: YES (cached)
+Running command: /home/johan/miniconda3/envs/fpga/bin/lm32-elf-gcc -print-search-dirs
+--- stdout ---
+install: /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/
+programs: =/home/johan/miniconda3/envs/fpga/bin/../libexec/gcc/lm32-elf/9.2.0/:/home/johan/miniconda3/envs/fpga/bin/../libexec/gcc/:/home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/lm32-elf/9.2.0/:/home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/
+libraries: =/home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/:/home/johan/miniconda3/envs/fpga/bin/../lib/gcc/:/home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/lib/lm32-elf/9.2.0/:/home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/lib/
+
+--- stderr ---
+
+
+Running command: /usr/bin/expr 'install: /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/' : 'install: *\(.*\)'
+--- stdout ---
+/home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/
+
+--- stderr ---
+
+
+Configuring picolibc.specs using configuration
+Configuring picolibcpp.specs using configuration
+Configuring test.specs using configuration
+Configuring picolibc.ld using configuration
+Configuring picolibcpp.ld using configuration
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpa9hgerq7/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpa9hgerq7/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Werror=implicit-function-declaration 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Werror=implicit-function-declaration: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpdq6263gx/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpdq6263gx/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Werror=vla 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Werror=vla: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpawsen7nj/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpawsen7nj/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Warray-bounds 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Warray-bounds: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpdftp2lh_/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpdftp2lh_/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Wold-style-definition 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wold-style-definition: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpuxhmgkrh/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpuxhmgkrh/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Werror=double-promotion 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Werror=double-promotion: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpgb1d1xko/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpgb1d1xko/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Wmissing-braces -Wno-missing-braces 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-missing-braces: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmph04f0uz8/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmph04f0uz8/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Wimplicit-int -Wno-implicit-int 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-implicit-int: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp4wydlnyx/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp4wydlnyx/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Wreturn-type -Wno-return-type 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Wno-return-type: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmph9efrs08/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmph9efrs08/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Wunused-command-line-argument -Wno-unused-command-line-argument 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ lm32-elf-gcc: error: unrecognized command line option '-Wunused-command-line-argument'; did you mean '-Wunused-dummy-argument'?
+
+Compiler for C supports arguments -Wno-unused-command-line-argument: NO (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpe3taqnkp/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpe3taqnkp/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib 
+
+Code:
+ 
+struct test { int part: 24; } __attribute__((packed));
+unsigned int foobar (const struct test *p) { return p->part; }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Checking if "packed structs may contain bitfields" compiles: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpurkwj6sc/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpurkwj6sc/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+#include <stddef.h>
+int overflows (size_t a, size_t b) { size_t x; return __builtin_mul_overflow(a, b, &x); }
+volatile size_t aa = 42;
+int main (void) { return overflows(aa, aa); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "has __builtin_mul_overflow" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpnqhh4u4q/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpnqhh4u4q/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+#include <stddef.h>
+int overflows (size_t a, size_t b) { size_t x; return __builtin_add_overflow(a, b, &x); }
+volatile size_t aa = 42;
+int main (void) { return overflows(aa, aa); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "has __builtin_add_overflow" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpkav_1sia/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpkav_1sia/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib 
+
+Code:
+ 
+float _Complex test(float _Complex z) { return z; }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Checking if "supports _Complex" compiles: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmptsb5giy_/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmptsb5giy_/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+volatile int a = 42;
+int main (void) {
+  return __builtin_expect(a, 1);
+}
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "has __builtin_expect" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp377se995/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp377se995/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Werror 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -Werror: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpdm8nwa0j/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpdm8nwa0j/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -Werror 
+
+Code:
+ 
+void *foobar(int) __attribute__((__alloc_size__(1)));
+void *foobar2(int, int) __attribute__((__alloc_size__(1, 2)));
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Checking if "attribute __alloc_size__" compiles: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp4x5g7xf4/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp4x5g7xf4/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -Werror 
+
+Code:
+ 
+void __attribute__((constructor(101))) ctor (void) {}
+void __attribute__((destructor(101))) dtor (void) {}
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Checking if "attributes constructor/destructor" compiles: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpeoxceqln/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpeoxceqln/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(void * i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_alloca(1)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_alloca" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp26yrnpk1/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp26yrnpk1/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(int i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_ffs(42)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_ffs" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp9acwhq9f/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp9acwhq9f/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(long i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_ffsl((long)42)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_ffsl" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpd63l45ar/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpd63l45ar/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(long long i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_ffsll((long long)42)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_ffsll" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmph426ql37/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmph426ql37/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(int i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_ctz((unsigned int)42)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_ctz" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpnvaothxx/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpnvaothxx/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(int i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_ctzl((unsigned long)42)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_ctzl" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp6dywqig2/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp6dywqig2/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(int i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_ctzll((unsigned long long)42)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_ctzll" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpr6hu0sq3/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpr6hu0sq3/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(long double i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_copysignl((long double)42, (long double) 42)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_copysignl" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpr4vy3myq/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpr4vy3myq/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(double i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_copysign(42, 42)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_copysign" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpxscakhbz/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpxscakhbz/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(int i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_isinfl((long double)42)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_isinfl" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpur99nlje/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpur99nlje/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(int i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_isinf((long double)42)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_isinf" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmppe8cqshm/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmppe8cqshm/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(int i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_isnanl((long double)42)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_isnanl" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpoyhz08ul/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpoyhz08ul/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(int i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_isnan((long double)42)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_isnan" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpdqstgpvi/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpdqstgpvi/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(int i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_finitel((long double)42)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_finitel" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -L/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpb6dq6pbo/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpb6dq6pbo/output.exe -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -nostdlib -nodefaultlibs -Wl,--no-dynamic-linker -Wl,--build-id=none -MD -MP 
+
+Code:
+ 
+static int foo(int i __attribute__((unused))) { return 0; }
+int main(void) { return foo(__builtin_isfinite((long double)42)); }
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/../../../../lm32-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000000000
+
+Checking if "test for __builtin_isfinite" : links: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpy42i2v1n/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpy42i2v1n/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -fno-tree-loop-distribute-patterns 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -fno-tree-loop-distribute-patterns: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpk6wxfnq6/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpk6wxfnq6/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -std=c18 -nostdlib -Werror 
+
+Code:
+ int __attribute__((no_builtin)) foo(int x) { return x + 1; }
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpk6wxfnq6/testfile.c:1:1: error: 'no_builtin' attribute directive ignored [-Werror=attributes]
+    1 | int __attribute__((no_builtin)) foo(int x) { return x + 1; }
+      | ^~~
+cc1: all warnings being treated as errors
+
+Checking if "no_builtin attribute" compiles: NO (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpz51w35g2/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpz51w35g2/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Werror=attributes 
+
+Code:
+ inline __attribute__((always_inline)) int foo(void) { return 0; }
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports function attribute always_inline: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpmks6fri4/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpmks6fri4/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -Werror=attributes 
+
+Code:
+ inline __attribute__((gnu_inline)) int foo(void) { return 0; }
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports function attribute gnu_inline: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpncdjdlm4/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpncdjdlm4/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -fno-builtin 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -fno-builtin: YES (cached)
+Running command: /usr/bin/sed -e '/^#/d' -e '/^$/d' -e 's/ .*$//' /home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/iconv/encoding.aliases
+--- stdout ---
+big5
+cp775
+cp850
+cp852
+cp855
+cp866
+euc_jp
+euc_kr
+euc_tw
+iso_8859_1
+iso_8859_10
+iso_8859_11
+iso_8859_13
+iso_8859_14
+iso_8859_15
+iso_8859_2
+iso_8859_3
+iso_8859_4
+iso_8859_5
+iso_8859_6
+iso_8859_7
+iso_8859_8
+iso_8859_9
+iso_ir_111
+koi8_r
+koi8_ru
+koi8_u
+koi8_uni
+ucs_2
+ucs_2_internal
+ucs_2be
+ucs_2le
+ucs_4
+ucs_4_internal
+ucs_4be
+ucs_4le
+us_ascii
+utf_16
+utf_16be
+utf_16le
+utf_8
+win_1250
+win_1251
+win_1252
+win_1253
+win_1254
+win_1255
+win_1256
+win_1257
+win_1258
+
+--- stderr ---
+
+
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp9m0ckh7m/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp9m0ckh7m/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -ffunction-sections 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -ffunction-sections: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp8dwyxm45/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp8dwyxm45/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -fstack-protector-all 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -fstack-protector-all: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpewp7_e1m/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpewp7_e1m/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -fstack-protector-strong 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -fstack-protector-strong: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp2jo3lqeo/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmp2jo3lqeo/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -fno-builtin-malloc 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -fno-builtin-malloc: YES (cached)
+Using cached compile:
+Cached command line:  lm32-elf-gcc -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/tinystdio -I/home/johan/pythondata-software-picolibc/pythondata_software_picolibc/data/newlib/libc/include -I/home/johan/litex/litex/soc/software/libbase -I/home/johan/litex/litex/soc/software/include -I/home/johan/litex/litex/soc/software -I/home/johan/Descargas/I2S/rd1101/source/build/software/include -I/home/johan/Descargas/I2S/rd1101/source/build/software/include/../libc -I/home/johan/litex/litex/soc/cores/cpu/lm32 /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpi2zbbxo9/testfile.c -o /home/johan/Descargas/I2S/rd1101/source/build/software/libc/meson-private/tmpi2zbbxo9/output.obj -c -Os -mbarrel-shift-enabled -mmultiply-enabled -mdivide-enabled -msign-extend-enabled -D__lm32__ -g3 -no-pie -fomit-frame-pointer -Wall -fno-builtin -fno-stack-protector -fexceptions -Wpragmas -D_FILE_OFFSET_BITS=64 -O0 -fno-builtin-free 
+
+Code:
+ extern int i;
+int i;
+
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Compiler for C supports arguments -fno-builtin-free: YES (cached)
+Configuring picolibc.h using configuration
+Build targets in project: 8
+NOTICE: Future-deprecated features used:
+ * 0.56.0: {'meson.source_root'}
+ * 0.58.0: {'meson.get_cross_property'}
+
+picolibc 1.7.9
+
+  User defined options
+    Cross files         : /home/johan/Descargas/I2S/rd1101/source/build/software/libc/cross.txt
+    includedir          : picolibc/lm32-elf/include
+    libdir              : picolibc/lm32-elf/lib
+    atomic-ungetc       : false
+    format-default      : integer
+    io-long-long        : true
+    multilib            : false
+    picocrt             : false
+    thread-local-storage: false
+
+Found ninja-1.11.1.git.kitware.jobserver-1 at /home/johan/miniconda3/envs/fpga/bin/ninja
+Failed to guess install tag for /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/picolibc.specs
+Failed to guess install tag for /home/johan/miniconda3/envs/fpga/bin/../lib/gcc/lm32-elf/9.2.0/picolibcpp.specs
+Failed to guess install tag for /usr/local/picolibc/lm32-elf/lib/picolibc.ld
+Failed to guess install tag for /usr/local/picolibc/lm32-elf/lib/picolibcpp.ld
+Command line for building ['newlib/libc.a'] is long, using a response file
