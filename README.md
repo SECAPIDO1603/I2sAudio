@@ -1,5 +1,5 @@
 # I2S - Protocolo de Audio
-Protocolo I2S
+Desarrollo del protocolo I2S, con la tarjeta de desarrollo Colorlight 75E
 
 Archivos fuente (Verilog): Carpeta source <br>
 Archivos de canción (txt): Carpeta songs <br>
